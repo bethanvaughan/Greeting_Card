@@ -1,0 +1,20 @@
+{
+  "name": "greeting_card_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --watchALL",
+    "dev": "concurrently \"watchify ./static/js/index.js -o bundle.js\" \"python -m http.server\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "jest": "^27.3.1",
+    "watchify": "^4.0.0"
+  }
+}
