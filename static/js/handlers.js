@@ -23,6 +23,24 @@ function displayOnCard(greeting, event, message) {
 
   document.querySelector("#myform").style.display = "none";
   document.querySelector("h1").style.display = "none";
+
+  let newButton = document.createElement("button");
+  newButton.textContent = "Make another card";
+  newButton.style.backgroundColor = "lightblue";
+  newButton.style.width = "50%";
+  newButton.style.marginLeft = "25%";
+
+  document.body.appendChild(newButton);
+  makeAnotherCard(newButton);
 }
 
+function makeAnotherCard(newButton) {
+  newButton.addEventListener("click", (e) => {
+    e.preventDefault;
+    document.querySelector("#myform").style.display = "block";
+    document.querySelector("h1").style.display = "block";
+    document.querySelector(".card").style.display = "none";
+    newButton.style.display = "none";
+  });
+}
 module.exports = { handleValues };
